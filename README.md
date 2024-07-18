@@ -2,7 +2,7 @@
 
 ![CI/CD workflow](https://github.com/Bjorn86/point-of-games/actions/workflows/ci-cd.yml/badge.svg?event=push)
 
-Проект представляет из себя SPA, предоставляющие информацию о видеоиграх. Выполнен в рамках React-интенсива стажировки в [Aston](https://astondevs.ru). Информация о картах предоставляется [RAWG Video Games Database API](https://rawg.io/apidocs).
+Проект представляет из себя SPA, предоставляющие информацию о видеоиграх. Информация о картах предоставляется [RAWG Video Games Database API](https://rawg.io/apidocs).
 
 ## Оглавление
 
@@ -31,7 +31,6 @@
 
 - 1 уровень (обязательный)
   - [x] Реализованы **Требования к функциональности**
-  - [ ] Для хранения учетных записей пользователей, их Избранного и Истории поиска, используем **LocalStorage** (в качестве БД используется Firebase)
   - React
     - [x] **Используются функциональные компоненты c хуками** в приоритете над классовыми ([пример](https://github.com/Bjorn86/point-of-games/blob/main/src/features/search/ui/search-form/search-form.jsx))
     - [x] Есть разделение на **умные и глупые компоненты** ([пример умного компонента](https://github.com/Bjorn86/point-of-games/blob/main/src/pages/details/details.jsx), [пример глупого компонента](https://github.com/Bjorn86/point-of-games/blob/main/src/shared/ui/score/score.jsx))
@@ -50,16 +49,11 @@
     - [x] Используется **RTK Query** ([пример](https://github.com/Bjorn86/point-of-games/blob/main/src/shared/api/rawg-api.js))
     - [x] Используется **Transforming Responses** ([пример](https://github.com/Bjorn86/point-of-games/blob/main/src/shared/api/rawg-api.js))
 - 2 уровень (необязательный)
-  - [ ] Использование **TypeScript**
-  - [ ] Подключен **storybook** и созданы два, три сториса с knobs, которые показывают разные состояния компонента
   - [x] Использование **Firebase** для учетных записей пользователей и их Избранного и Истории поиска
   - [x] Настроен **CI/CD**
   - [x] Реализована **виртуализация списков** ([пример](https://github.com/Bjorn86/point-of-games/blob/main/src/features/history/table/ui/history-table.jsx))
   - [x] Используются **мемоизированные селекторы** ([пример](https://github.com/Bjorn86/point-of-games/blob/main/src/entities/auth/model/slice.js))
-  - [ ] Используется **нормализованная структура стейта**
-  - [ ] Проведена **оптимизация приложения**
   - [x] **Feature Flags.** Реализовать фичу “Поделиться в телеграм”, закрытую под фича флагом
-  - [ ] Добавить тесты через jest, react-testing-library или Playwright.
   - [x] Связь UI и бизнес-логики построена не через команды, а через **события** ([пример нэйминга экшена](https://github.com/Bjorn86/point-of-games/tree/main/src/features/favorites/model/added-to-favorites.js), [пример использования события](https://github.com/Bjorn86/point-of-games/tree/main/src/features/favorites/lib/use-favorites.jsx))
   - [x] **Project Console API** ([фича](https://github.com/Bjorn86/point-of-games/tree/main/src/features/console))
 
@@ -148,16 +142,6 @@ point('/getGame [id]'); // получает игру по ID
   - Семантическая вёрстка
 - Методологии
   - [Feature-Sliced Design](https://feature-sliced.design/ru/)
-
-### Чему я научился работая над проектом
-
-- Работе с CSS Modules
-- Работе с RTK Query
-- Работе с Firebase
-- Работе с виртуализованными списками
-- Построению работы приложения без взаимодействия с UI
-- Работе по методологии Feature-Sliced Design
-- Обработке ошибок при помощи предохранителей (Error boundaries)
 
 ## Автор
 
